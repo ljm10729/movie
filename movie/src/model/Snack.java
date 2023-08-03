@@ -1,36 +1,40 @@
 package model;
 
+import model.enums.SnackCode;
+import model.enums.SnackSize;
+
 public class Snack {
-    // 종류
-    private String type;
+    private final SnackCode snackCode;
+    private final String name;
+    private final Double basePrice;
+    private SnackSize snackSize;
 
-    //가격
-    private Integer price;
-
-    //사이즈
-    private String size;
-
-    public String getType() {
-        return type;
+    public Snack ( SnackCode snackCode, String name, Double basePrice, SnackSize snackSize ) {
+        this.snackCode = snackCode;
+        this.name = name;
+        this.basePrice = basePrice;
+        this.snackSize = snackSize;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public Snack ( SnackCode snackCode, String name, Double basePrice ) {
+        this.snackCode = snackCode;
+        this.name = name;
+        this.basePrice = basePrice;
     }
 
-    public Integer getPrice() {
-        return price;
+    public SnackCode getSnackCode ( ) {
+        return snackCode;
     }
 
-    public void setPrice(Integer price) {
-        this.price = price;
+    public String getName ( ) {
+        return name;
     }
 
-    public String getSize() {
-        return size;
+    public Double getBasePrice ( ) {
+        return basePrice;
     }
 
-    public void setSize(String size) {
-        this.size = size;
+    public SnackSize getSnackSize ( ) {
+        return snackSize;
     }
 }
